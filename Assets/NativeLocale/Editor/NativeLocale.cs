@@ -27,6 +27,7 @@ public class NativeLocale
         string projPath = projectPath + "/Unity-iPhone.xcodeproj/project.pbxproj";
         PBXProject proj = new PBXProject();
         proj.ReadFromFile(projPath);
+        proj.ClearVariantGroupEntries("InfoPlist.strings");
 
         foreach(var locale in validLocales)
         {
